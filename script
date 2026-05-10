@@ -1,0 +1,18 @@
+import hashlib
+
+def generate_hash():
+    # Get user input
+    user_data = input("enter what you would like to hash after this:")
+    
+    # 1. Encode the string to bytes
+    # 2. Hash it using SHA-256
+    # 3. Convert to a readable hex string
+    hash_result = hashlib.sha256(user_data.encode()).hexdigest()
+    
+    print("\n" + "="*50)
+    print(f"INPUT: {user_data}")
+    print(f"SHA-256 HASH: {hash_result}")
+    print("="*50)
+
+if __name__ == "__main__":
+    generate_hash()
